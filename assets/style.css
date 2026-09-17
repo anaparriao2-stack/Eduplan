@@ -5,158 +5,209 @@ e atualizada em todos os lugares que a usam*/
 
 :root{
     
-    --azul-escuro: #1D4ED8;
-    --azul: #2563EB;
-    --verde: #16A34A;
-    --verde-escuro:#15803D;
-    --texto-principal:#3968d3;
-    --texto-secundario: #475569;
-    --cor-borda:#E5E7EB;
-    --cor-fundo:#FFFFFF;
+   --azul-escuro: #1D4ED8;
+   --azul: #2563EB;
+   --verde: #16A34A;
+   --verde-escuro:#15803D;
+   --texto-principal:#3968d3;
+   --texto-secundario: #475569;
+   --cor-borda:#E5E7EB;
+   --cor-fundo:#FFFFFF;
 
 }
-/* o "*" seleciona todos os elementos da pagina */
+/* o "*" serve para selecionar todos os elementos da pagina */
 *{
-    box-sizing: border-box; /* Faz o padding e a borda ficarem dentro do tamanho do que a gente
-    define pro elemento,e não somando a ele */
+   box-sizing: border-box;/* faz com que o padding e a 
+   borda ficarem dentro do tamanho do que a gente define
+   pro elemento, e não somados a ele*/ 
 
-    /* Reseta o espaçamento padrão do navegador */
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
  }
 
  body {
-    font-family: 'Inter', sans-serif; /* Tipo de fonte do
-     projeto*/
-     color: var(--texto-principal); /* Cor da fonte */
+   font-family: 'Inter', sans-serif;
+   color: var(--texto-principal);/*cor da fonte*/
  }
 
  .header {
-    position: sticky;/* Faz o cabecalho "grudar no
-     topo da tela" */
-    top: 0; ;/* coladinho no topo */
-    z-index: 100;/* ordem de empilhamento (camadas) */
-    background-color: var(--cor-fundo); /* Cor de fundo*/
-    border-bottom: 1px solid var(--cor-borda); /* Cor da borda */
+   position: sticky;/* Faz o cabecalho "grudar no topo da tela" */
+   top: 0;/* coladinha no topo */
+   z-index: 100;/* ordem de empilhamento (camadas) */
+   background-color: var(--cor-fundo);/* cor de fundo */
+   border-bottom: 1px solid var(--cor-borda);/* cor da borda */
  }
 
  .header-inner {
-    max-width: 1200px; /*O conteudo não ultrapassa 
-    1200px de largura*/
-    margin: 0 auto; /* Margem 0 em cima/baixo e 
-    "auto" nas laterais */
-    padding: 0 24px; /* espaço interno: 0 em cima/
-    baixo e 24px nas laterais */
+   max-width: 1200px;/* largura maxima */
+   margin: 0 auto;/*margem 0 em cima///baixo, "auto" nas laterais */
+   padding: 0 24px;/* padding 0 em cima/baixo, 24px nas laterais */
 
-    /* Aplicação do Flexbox */
+   /* aplicamento de flexbox */
 
-    display: flex; /* Transforma essa div em um 
-    "container flexivel" isso e o que permite 
-    colocar logo,menu e botões um do lado do outro
-    */
+   display: flex;/* tranforma essa div em um "container flex",
+   isso permite um melhor alinhamento dos elementos internos */
 
-    align-items: center; /* Alinha os itens no 
-    CENTRO verticalmente dentro do header */
+   align-items: center;/* Alinhamento itens no CENTRO verticalmente
+   dentro do header */
 
-    justify-content: space-between; /* Distribui os 
-    itens: o primeiro cola na esquerda,o ultimo
-    cola na direita, e sobra espaço entre eles */
-
-    gap: 24px; /* Espaço minimo entre os itens ( logo,menu e botões) */
+   justify-content: space-between;/* Distribui os itens: o primeiro
+   cola na esquerda, o ultimo cola na direita, os outros ocupam o espaço restante */
+   gap: 24px;/* Espaçamento mínimo entre (logo,menu e botoes)*/
  }
 
- /* Logo */
-
- .Logo {
+ /*logo*/
+ .logo {
    display: flex;
-   align-items center;
+   align-items: center;
    gap: 8px;
-   fonte-size: 20px; /* Tamanho da fonte */
-   font-weight: 800; 
-   color: var(--texto principal):
-   text-decoration: none; /* essa linha remove o sublinhado que o 
-   navegador cola em links por padrão*/
-
-
+   font-size: 20px;/*tamanho da fonte*/
+   font-weight: 800;
+   color: var(--texto-principal);
+   text-decoration: none;/*essa linha remove a transformação de texto */
  }
 
- .Logo img {
-    width: 60px; /*Define a largura da imagem da logo. */
+ .logo img {
+   width: 80px;/*largura da imagem*/
+   
  }
 
- /* Menu de navegação */
 
- .nav {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none; /* O menu  uma lista (ul), e por padrão listas
-    mostram bolinas antes de cada item. Essa propiedade remove as 
-    bolinhas*/
+.nav {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   list-style: none;/* remove os marcadores da lista */
+   margin-top: 0px;
+   padding: 0;
 
-    /* Zera espaçamento padrão que o navegador aplica em listas */
-    margin: 0;
-    padding: 0;
 }
 
 .nav a {
-    text-decoration: none;
-    color: var(--texto-secundario);
-    font-size: 15px;
-    font-weight: 500;
-    padding: 6px 0; /* um respiro em cima e embaixo do texto do link,
-    facilitando o clique */
-    transition: color .2s ease; /* Diz ao navegador: quando a cor mudar
-    (por exemplo no houver), faça essa mudança suave, em 0,2 segundos,em 
-    vez de trocar a cor de forma brusca */
-    white-space: nowrap; /* Impede que o texto do link quebre em duas
-    linhas caso o espaço fique apertado */
+   text-decoration: none;/* remove a sublinhado do link */
+   color: var(--texto-secundario);/* cor do link */
+   font-size: 15px;
+   font-weight: 500;
+   padding: 6px 0;
+   transition: color 0.2s ease;/* efeito de transição suave */
+   white-space: nowrap;/* impede a quebra de linha */
 
 }
-/* :hover e aplicado quando o mouse passa por cima do link */
+/*:hover é aplicada quando o mouse está sobre o elemento */
+
 .nav a:hover {
-    color: var(--texto-pricipal);
+   color: var(--texto-principal);
 }
 
-/* Botões (Entrar / cadastrar) */
+/* botoes (entrada e cadastro) */
+.action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-.actions {
+/*estilos BASE, compartilhado pelos dois botoes */
+
+.btn{
+   font-family: 'inherit';
+   font-size: 14px;
+   font-weight: 600;
+   border-radius: 4px;
+   padding: 10px 18px;
+   cursor: pointer;
+   border: 1px solid transparent;
+   text-decoration: none;
+
+   /*centralizar o texto dentro do botao,  tanto na horizontal
+    quanto na vertical */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn-entrar {
+   background-color: var(--cor-fundo);
+   color: var(--texto-principal);
+   border-color: var(--cor-borda);
+
+}
+
+.btn-entrar:hover {
+   border-color: var(--texto-principal);
+
+}
+
+.btn-cadastrar {
+   background-color: var(--verde);
+   color: #FFF
+}
+
+.btn-cadastrar {
+   border-color: var(--verde-escuro);
+}
+
+/* Menu hamburguer */ 
+.hamburguer {
+    display: block;  
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* some no desktop,so existe no mobile */
+.nav-action {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburguer {
+        display: block;
+    }
+
+    .actions
+    display: none;
+    /* Os botoes originais do header somem no 
+    mobile,porque agora eles moram dentro do 
+    menu*/
+ }  
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0; 
+        background: var(--cor-fundo);
+        border-bottom: 1px solid var(--cor-borda);
+        padding: 16px 24px;
+        gap: 16px;
+
+
+    }
+
+    /* Classe que o JavaScript vai adicionar/
+    remover para mostrar o menu */
+    .nav.ativo {
+        display: flex;
+  
+
+    .nav.ativo.actions
     display: flex;
-    align-items: center;
     gap: 12px;
-}
+    margin-top: 8px;
+    border-top: 1px solid var(--cor-borda)
+    padding-top: 16px;
+    width: 100%;
 
-/* Estilo BASE, compatilhado pelos dois botões */
+ }
 
-.btn {
-    font-family: inherit
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 8px;/* Arredonda os cantos dos botões */
-    padding: 10px 18px;
-    cursor: pointer; 
-    border: 1px solid transparente;
-    text-decoration: none; 
-
-    /* Centralizam o texto dentro do botão, tanto na horizontal quanto
-     na vestical */
-     display: inline-flex 
-     align-items: center
-     jusrify-content: center;
-}
-
-.btn-entrar{
-    backgound-color: var(--cor-fundo);
-    color: var(--texto-principal);
-    border-color: var(--cor-borda);
-}
-
-.btn-entrar:hover
-    border-color: var(--texto-principal);
-
-.btn-cadrastar {
-    background-color: var(--verde);
-    color: #FFF;
-}
-
+ .nav-action .btn{
+    flex: 1;
+    /* Os dois botoes dividem a largura igualmente*/
+    
+ }
 
